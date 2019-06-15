@@ -9,6 +9,8 @@ TagManager:
   - Bullet
   - Ground
   - Pickup
+  - PlayerFeet
+  - PlayerHead
   layers:
   - Default
   - TransparentFX
