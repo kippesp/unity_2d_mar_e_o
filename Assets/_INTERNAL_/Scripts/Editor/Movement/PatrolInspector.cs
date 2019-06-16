@@ -114,6 +114,8 @@ public class PatrolInspector : InspectorBase
 	//Draw handle gizmos in the scene in Edit Mode to move waypoints around, little blue dots in Play Mode
 	private void OnSceneGUI()
 	{
+        return;
+
 		Vector3 lastPos = patrolScript.transform.position;
 		Handles.color = new Color32(33,150,243,255);
 		Vector3 orientation;
