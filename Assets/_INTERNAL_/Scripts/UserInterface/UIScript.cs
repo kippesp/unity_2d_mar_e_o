@@ -135,8 +135,13 @@ public class UIScript : MonoBehaviour
 	        gameOverPanel.SetActive(true);
             audioSource.clip = MarioDeathTheme;
             audioSource.Play();
-	    }
-	}
+            GameObject playerGameObject = GameObject.FindWithTag("Player");
+            Animator anim = playerGameObject.GetComponent<Animator>();
+            anim.SetBool("Killed", true);
+            var Script = playerGameObject.GetComponent<KTWDAnimateDeath>();
+            Script.AnimateDeath();
+        }
+    }
 
 
 

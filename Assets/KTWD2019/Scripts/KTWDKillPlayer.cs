@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class KTWDKillPlayer : MonoBehaviour
 {
 	public bool destroyWhenActivated = false;
+    public bool ignoreTag = false;
 	private int healthChange = -1;
 
     // Start is called before the first frame update
@@ -25,7 +26,7 @@ public class KTWDKillPlayer : MonoBehaviour
 	}
 	private void OnTriggerEnter2D(Collider2D colliderData)
 	{
-        if (!colliderData.gameObject.CompareTag("Player"))
+        if (!ignoreTag && !colliderData.gameObject.CompareTag("Player"))
             return;
 
         GameObject playerGameObject = GameObject.FindWithTag("Player");
