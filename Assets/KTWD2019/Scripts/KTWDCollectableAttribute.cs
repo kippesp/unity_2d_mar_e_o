@@ -18,7 +18,7 @@ public class KTWDCollectableAttribute : MonoBehaviour
 
         audiosource = GetComponent<AudioSource>();
         srenderer = gameObject.GetComponent<SpriteRenderer>();
-        collider = GetComponentInParent<Collider2D>();
+        collider = GetComponent<Collider2D>();
     }
 
 
