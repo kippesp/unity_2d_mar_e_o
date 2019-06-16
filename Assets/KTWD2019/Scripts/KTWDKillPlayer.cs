@@ -7,10 +7,17 @@ public class KTWDKillPlayer : MonoBehaviour
 	public bool destroyWhenActivated = false;
 	private int healthChange = -1;
 
+    public AudioClip MainTheme;
+    public AudioClip MarioDeathTheme;
+
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = MainTheme;
+        audioSource.Play();
     }
 
     // Update is called once per frame
@@ -28,6 +35,10 @@ public class KTWDKillPlayer : MonoBehaviour
 	{
 
         GameObject playerGameObject = GameObject.FindWithTag("Player");
+
+        // trigger end game theme
+        audioSource.clip = MarioDeathTheme;
+        audioSource.Play();
 
         // This is a modification from the original script which obtained the
         // HealthSystemAttribute from the colliding object.  Since our game
