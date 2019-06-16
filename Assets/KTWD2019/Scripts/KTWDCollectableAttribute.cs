@@ -7,11 +7,18 @@ public class KTWDCollectableAttribute : MonoBehaviour
     public int pointsWorth = 1;
     
     private UIScript userInterface;
+    private AudioSource audiosource;
+    private SpriteRenderer srenderer;
+    private Collider2D collider;
 
     private void Start()
     {
         // Find the UI in the scene and store a reference for later use
         userInterface = GameObject.FindObjectOfType<UIScript>();
+
+        audiosource = GetComponent<AudioSource>();
+        srenderer = gameObject.GetComponent<SpriteRenderer>();
+        collider = GetComponentInParent<Collider2D>();
     }
 
 
@@ -37,8 +44,17 @@ public class KTWDCollectableAttribute : MonoBehaviour
                 userInterface.AddPoints(playerId, pointsWorth);
             }
 
-            // then destroy this object
-            Destroy(gameObject);
+            if (audiosource != null)
+            {
+                audiosource.Play();
+            }
+
+            // Disable collider and rendering while the sound finishes playing
+            srenderer.enabled = false;
+            collider.enabled = false;
+
+            // Schedule this object to be destroyed
+            Destroy(gameObject, 1f);
         }
     }
 }
