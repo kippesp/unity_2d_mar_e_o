@@ -4996,8 +4996,8 @@ GameObject:
   - component: {fileID: 413786570}
   - component: {fileID: 413786569}
   - component: {fileID: 413786568}
-  - component: {fileID: 413786572}
   - component: {fileID: 413786571}
+  - component: {fileID: 413786572}
   m_Layer: 0
   m_Name: SpinningCoin
   m_TagString: Untagged
@@ -5112,7 +5112,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 413786567}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dde7269c73c0d4a0aa7d33419579c17d, type: 3}
+  m_Script: {fileID: 11500000, guid: c837a1d4295042e4faf823deb8cbbc7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pointsWorth: 1
