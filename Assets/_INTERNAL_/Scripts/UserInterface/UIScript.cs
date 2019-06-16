@@ -24,6 +24,10 @@ public class UIScript : MonoBehaviour
 	public Transform inventory;
 	public GameObject resourceItemPrefab;
 
+    public AudioClip MainTheme;
+    public AudioClip MarioDeathTheme;
+
+    private AudioSource audioSource;
 
 	// Internal variables to keep track of score, health, and resources, win state
 	private int[] scores = new int[2];
@@ -34,6 +38,10 @@ public class UIScript : MonoBehaviour
 
 	private void Start()
 	{
+        audioSource = gameObject.AddComponent<AudioSource>() as AudioSource;
+        audioSource.clip = MainTheme;
+        audioSource.Play();
+
 		if(numberOfPlayers == Players.OnePlayer)
 		{
 			// No setup needed
@@ -125,6 +133,8 @@ public class UIScript : MonoBehaviour
 			gameOver = true;
 	        statsPanel.SetActive(false);
 	        gameOverPanel.SetActive(true);
+            audioSource.clip = MarioDeathTheme;
+            audioSource.Play();
 	    }
 	}
 
