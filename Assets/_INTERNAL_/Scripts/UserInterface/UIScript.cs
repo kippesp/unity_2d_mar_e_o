@@ -135,6 +135,7 @@ public class UIScript : MonoBehaviour
 	        statsPanel.SetActive(false);
 	        gameOverPanel.SetActive(true);
             audioSource.clip = MarioDeathTheme;
+            audioSource.loop = false;
             audioSource.Play();
             GameObject playerGameObject = GameObject.FindWithTag("Player");
             Animator anim = playerGameObject.GetComponent<Animator>();

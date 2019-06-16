@@ -11,6 +11,7 @@ TagManager:
   - Pickup
   - PlayerFeet
   - PlayerHead
+  - Pipe
   layers:
   - Default
   - TransparentFX
