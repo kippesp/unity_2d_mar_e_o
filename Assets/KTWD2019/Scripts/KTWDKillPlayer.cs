@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class KillPlayer : MonoBehaviour
+public class KTWDKillPlayer : MonoBehaviour
 {
 	public bool destroyWhenActivated = false;
 	private int healthChange = -1;
