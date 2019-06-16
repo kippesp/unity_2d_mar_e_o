@@ -85,7 +85,7 @@ public class Move : Physics2DObject
         rigidbody2D.AddForce(movement * speed * 10f);
 
         float velx = rigidbody2D.velocity.x;
-        bool walking = Mathf.Abs(velx) > 0.1;
+        bool walking = Mathf.Abs(velx) > 0.05;
         animator.SetBool("Moving", walking);
     }
 }
