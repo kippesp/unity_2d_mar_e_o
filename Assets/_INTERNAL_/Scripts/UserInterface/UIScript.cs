@@ -41,6 +41,7 @@ public class UIScript : MonoBehaviour
         audioSource = gameObject.AddComponent<AudioSource>() as AudioSource;
         audioSource.clip = MainTheme;
         audioSource.Play();
+        audioSource.loop = true;
 
 		if(numberOfPlayers == Players.OnePlayer)
 		{

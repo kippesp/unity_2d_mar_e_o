@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8973888567208889073}
   - component: {fileID: 8973888567208889074}
   - component: {fileID: 8973888567208889084}
+  - component: {fileID: 1736277527}
   m_Layer: 0
   m_Name: PatrollingGoomba
   m_TagString: Enemy
@@ -123,7 +124,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &8973888567208889074
 CapsuleCollider2D:
@@ -161,6 +162,20 @@ MonoBehaviour:
   waypoints:
   - {x: 25.75, y: 5.887929}
   - {x: 12.8, y: 5.887929}
+--- !u!114 &1736277527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8973888567208889077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b7b6f0a9e4b65b41aa542f8bd7d0571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyWhenActivated: 0
+  ignoreTag: 0
 --- !u!1001 &8973888567477395438
 PrefabInstance:
   m_ObjectHideFlags: 0
