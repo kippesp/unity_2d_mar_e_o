@@ -7674,14 +7674,14 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607817201}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.9, y: 1.17}
+  m_Size: {x: 0.9, y: 1.05}
   m_Direction: 0
 --- !u!1 &1731422725
 GameObject:
@@ -7859,6 +7859,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1736277521 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8973888567208889077, guid: e8175b2b96f0ff84ca2fa3894cf7d3a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 8973888567655904484}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1736277527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736277521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b7b6f0a9e4b65b41aa542f8bd7d0571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyWhenActivated: 0
 --- !u!1 &2070769830
 GameObject:
   m_ObjectHideFlags: 0

@@ -25,8 +25,10 @@ public class KTWDKillPlayer : MonoBehaviour
 	}
 	private void OnTriggerEnter2D(Collider2D colliderData)
 	{
-        GameObject playerGameObject = GameObject.FindWithTag("Player");
+        if (!colliderData.gameObject.CompareTag("Player"))
+            return;
 
+        GameObject playerGameObject = GameObject.FindWithTag("Player");
         // This is a modification from the original script which obtained the
         // HealthSystemAttribute from the colliding object.  Since our game
         // has three colliders (head, body, feet), this won't work.  We require
