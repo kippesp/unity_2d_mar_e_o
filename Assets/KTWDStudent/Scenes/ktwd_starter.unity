@@ -4506,15 +4506,15 @@ PrefabInstance:
     - target: {fileID: 11445676, guid: 0f6ae8712879c4f40bf6af3fe490badd, type: 3}
       propertyPath: MarioDeathTheme
       value: 
-      objectReference: {fileID: 8300000, guid: 2db89011ef25e884796a11479bc063fc, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 11445676, guid: 0f6ae8712879c4f40bf6af3fe490badd, type: 3}
       propertyPath: MainTheme
       value: 
-      objectReference: {fileID: 8300000, guid: 69ffafce8a6cbe0428fbba3ff83c62cc, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 11445676, guid: 0f6ae8712879c4f40bf6af3fe490badd, type: 3}
       propertyPath: LevelCompleteTheme
       value: 
-      objectReference: {fileID: 8300000, guid: 52ba3db982f291542a87fdd38d036528, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 22382300, guid: 0f6ae8712879c4f40bf6af3fe490badd, type: 3}
       propertyPath: m_RenderMode
       value: 0
