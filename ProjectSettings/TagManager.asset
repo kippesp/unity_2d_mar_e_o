@@ -13,6 +13,8 @@ TagManager:
   - PlayerHead
   - Pipe
   - FlagPoleFlag
+  - PowButton
+  - PlayerBody
   layers:
   - Default
   - TransparentFX
