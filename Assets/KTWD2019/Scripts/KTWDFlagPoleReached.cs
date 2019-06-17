@@ -26,15 +26,15 @@ public class KTWDFlagPoleReached : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D otherCollider)
     {
-        string playerTag = otherCollider.transform.root.gameObject.tag;
+        GameObject player = otherCollider.transform.root.gameObject;
+        string playerTag = player.tag;
 
         if (playerTag == "Player")
         {
-            GameObject player = otherCollider.gameObject;
-            Rigidbody2D rbPlayer = player.GetComponent<Rigidbody2D>();
+            var Script = player.GetComponent<KTWDAnimateWin>();
+            Script.AnimateWin();
 
             flagAnimator.enabled = true;
-            rbPlayer.constraints |= RigidbodyConstraints2D.FreezeAll;
 
             //Debug.Log("Flag pole reached");
 
@@ -42,6 +42,7 @@ public class KTWDFlagPoleReached : MonoBehaviour
 
             AudioSource audioSource = GetComponentInParent<AudioSource>();
             audioSource.Play();
+
         }
     }
 }
