@@ -26,6 +26,7 @@ public class UIScript : MonoBehaviour
 
     public AudioClip MainTheme;
     public AudioClip MarioDeathTheme;
+    public AudioClip LevelCompleteTheme;
 
     private AudioSource audioSource;
 
@@ -121,8 +122,19 @@ public class UIScript : MonoBehaviour
 			winLabel.text = "Player " + ++playerNumber + " wins!";
 			statsPanel.SetActive(false);
 			winPanel.SetActive(true);
+
+            audioSource.clip = LevelCompleteTheme;
+            audioSource.Play();
+            audioSource.loop = false;
+            audioSource.Play();
 		}
 	}
+
+    public void LevelClear(int playerNumber)
+    {
+        // With only one level, the game is won
+        GameWon(playerNumber);
+    }
 
 
 

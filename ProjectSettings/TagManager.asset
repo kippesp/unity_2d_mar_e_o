@@ -12,6 +12,7 @@ TagManager:
   - PlayerFeet
   - PlayerHead
   - Pipe
+  - FlagPoleFlag
   layers:
   - Default
   - TransparentFX
