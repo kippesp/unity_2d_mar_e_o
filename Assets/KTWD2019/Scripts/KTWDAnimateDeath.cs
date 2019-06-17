@@ -12,6 +12,8 @@ public class KTWDAnimateDeath : MonoBehaviour
 
     public void AnimateDeath()
     {
+        Animator anim = GetComponent<Animator>();
+        anim.SetBool("Killed", true);
         // 1. Turn off colliders
         var colliders = gameObject.GetComponentsInChildren<Collider2D>();
         foreach (var collider in colliders)

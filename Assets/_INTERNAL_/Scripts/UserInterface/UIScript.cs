@@ -150,8 +150,6 @@ public class UIScript : MonoBehaviour
             audioSource.loop = false;
             audioSource.Play();
             GameObject playerGameObject = GameObject.FindWithTag("Player");
-            Animator anim = playerGameObject.GetComponent<Animator>();
-            anim.SetBool("Killed", true);
             var Script = playerGameObject.GetComponent<KTWDAnimateDeath>();
             Script.AnimateDeath();
         }
