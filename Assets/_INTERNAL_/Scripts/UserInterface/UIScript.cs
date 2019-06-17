@@ -157,6 +157,11 @@ public class UIScript : MonoBehaviour
         }
     }
 
+    public void StopMusic()
+    {
+        audioSource.Stop();
+    }
+
 
 
 	public void SetHealth(int amount, int playerNumber)
