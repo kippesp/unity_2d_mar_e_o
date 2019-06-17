@@ -22,7 +22,7 @@ public class KTWDFlagDropFinished : MonoBehaviour
     {
         string otherColliderTag = otherCollider.gameObject.tag;
 
-        Debug.Log("flag drop collision");
+        //Debug.Log("flag drop collision");
 
         // The level is complete when flag finishes its drop
         if (otherColliderTag == "FlagPoleFlag")

@@ -36,7 +36,7 @@ public class KTWDFlagPoleReached : MonoBehaviour
             flagAnimator.enabled = true;
             rbPlayer.constraints |= RigidbodyConstraints2D.FreezeAll;
 
-            Debug.Log("Flag pole reached");
+            //Debug.Log("Flag pole reached");
 
             ui.StopMusic();
 
