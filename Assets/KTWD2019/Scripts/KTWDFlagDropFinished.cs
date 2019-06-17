@@ -18,7 +18,7 @@ public class KTWDFlagDropFinished : MonoBehaviour
     {
         
     }
-    void OnCollisionEnter2D(Collision2D otherCollider)
+    void OnTriggerEnter2D(Collider2D otherCollider)
     {
         string otherColliderTag = otherCollider.gameObject.tag;
 
