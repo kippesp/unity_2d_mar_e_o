@@ -6127,8 +6127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7b6f0a9e4b65b41aa542f8bd7d0571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyWhenActivated: 0
-  killcollider: {fileID: 1607817203}
+  destroyWhenActivated: 1
 --- !u!4 &253080828 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5076022435035944392, guid: 8833f697ba710484e964433380d5b235,

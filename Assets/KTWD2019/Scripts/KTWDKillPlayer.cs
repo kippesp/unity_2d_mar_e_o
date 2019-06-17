@@ -30,7 +30,15 @@ public class KTWDKillPlayer : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D collider)
 	{
         if (collider != killcollider)
+        {
+            // This isn't the player, but we still may want to destroy the
+            // object anyway (e.g., goomba falling in a pit).
+			if(destroyWhenActivated)
+			{
+				Destroy(collider.gameObject);
+			}
             return;
+        }
 
         GameObject playerGameObject = GameObject.FindWithTag("Player");
         // This is a modification from the original script which obtained the
@@ -48,7 +56,7 @@ public class KTWDKillPlayer : MonoBehaviour
 
 			if(destroyWhenActivated)
 			{
-				Destroy(this.gameObject);
+				Destroy(playerGameObject);
 			}
 		}
 	}
