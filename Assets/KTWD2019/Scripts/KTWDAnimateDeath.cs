@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class KTWDAnimateDeath : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     public void AnimateDeath()
     {
         Animator anim = GetComponent<Animator>();

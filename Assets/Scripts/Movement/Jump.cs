@@ -15,6 +15,7 @@ public class Jump : Physics2DObject
     [Header("Ground setup")]
     //if the object collides with another object tagged as this, it can jump again
     public string groundTag = "Ground";
+    private string obstaclesTag = "Obstacles";
 
     //this determines if the script has to check for when the player touches the ground to enable him to jump again
     //if not, the player can jump even while in the air
@@ -44,8 +45,8 @@ public class Jump : Physics2DObject
 
     private void OnCollisionEnter2D(Collision2D collisionData)
     {
-        if (checkGround
-            && collisionData.gameObject.CompareTag(groundTag))
+        string tag = collisionData.gameObject.tag;
+        if (checkGround && (tag == groundTag || tag == obstaclesTag))
         {
             canJump = true;
         }

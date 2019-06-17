@@ -6,8 +6,7 @@ public class KTWDChangeDirectionOnHit : MonoBehaviour
 {
     private Rigidbody2D rb;
     private float dir;
-    public float maxSpeed = 10f;
-    private float accel = 3f;
+    public float maxSpeed = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -24,10 +23,10 @@ public class KTWDChangeDirectionOnHit : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Mathf.Abs(rb.velocity.x) < maxSpeed)
-        {
-            rb.AddForce(Vector2.right * dir * accel * 1000f * Time.fixedDeltaTime);
-        }
+        float newx = transform.position.x + dir * maxSpeed * Time.fixedDeltaTime;
+        float newy = transform.position.y +
+            0.5f * 80f * Physics2D.gravity.y * Time.fixedDeltaTime * Time.fixedDeltaTime;
+		rb.MovePosition(new Vector2(newx, newy));
     }
 
     // This function gets called everytime this object collides with another
@@ -35,7 +34,6 @@ public class KTWDChangeDirectionOnHit : MonoBehaviour
     {
         if (collisionData.collider.gameObject.CompareTag("Ground"))
             return;
-        Debug.Log("enter!!!");
         dir = -dir;
     }
 }

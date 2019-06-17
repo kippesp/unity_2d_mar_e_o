@@ -15,6 +15,7 @@ TagManager:
   - FlagPoleFlag
   - PowButton
   - PlayerBody
+  - Obstacles
   layers:
   - Default
   - TransparentFX
