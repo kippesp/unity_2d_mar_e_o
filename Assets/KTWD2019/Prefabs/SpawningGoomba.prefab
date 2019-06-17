@@ -160,7 +160,7 @@ MonoBehaviour:
   orientToDirection: 0
   lookAxis: 0
   waypoints:
-  - {x: 4.4543204, y: 11.206036}
+  - {x: 17.16, y: 10.886}
 --- !u!114 &5920632654585911810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,7 +174,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyWhenActivated: 0
-  killcollider: {fileID: 0}
 --- !u!1001 &3360802548628552699
 PrefabInstance:
   m_ObjectHideFlags: 0
