@@ -9,6 +9,7 @@ public class KTWDSmash : MonoBehaviour
     private Animator animator;
     private AudioSource source;
     private Collider2D parentCollider;
+    private Collider2D feetCollider;
 
     void Start()
     {
@@ -16,6 +17,8 @@ public class KTWDSmash : MonoBehaviour
         animator = GetComponentInParent<Animator>();
         source = GetComponent<AudioSource>();
         parentCollider = GetComponentInParent<Collider2D>();
+        GameObject feet = GameObject.FindWithTag("PlayerFeet");
+        feetCollider = feet.GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -26,7 +29,10 @@ public class KTWDSmash : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.collider != feetCollider)
+            return;
         parentCollider.enabled = false;
+        HeadCollider.enabled = false;
         animator.SetBool("Killed", true);
         Destroy(transform.parent.gameObject, 0.5f);
         source.Play();
