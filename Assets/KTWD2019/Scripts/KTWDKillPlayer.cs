@@ -5,12 +5,15 @@ using System.Collections.Generic;
 public class KTWDKillPlayer : MonoBehaviour
 {
 	public bool destroyWhenActivated = false;
-    public bool ignoreTag = false;
 	private int healthChange = -1;
+    // If we collide with this collider, kill the player
+    private Collider2D killcollider;
 
     // Start is called before the first frame update
     void Start()
     {
+        GameObject body = GameObject.FindWithTag("PlayerBody");
+        killcollider = body.GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -24,9 +27,9 @@ public class KTWDKillPlayer : MonoBehaviour
 	{
 		OnTriggerEnter2D(collisionData.collider);
 	}
-	private void OnTriggerEnter2D(Collider2D colliderData)
+	private void OnTriggerEnter2D(Collider2D collider)
 	{
-        if (!ignoreTag && !colliderData.gameObject.CompareTag("Player"))
+        if (collider != killcollider)
             return;
 
         GameObject playerGameObject = GameObject.FindWithTag("Player");

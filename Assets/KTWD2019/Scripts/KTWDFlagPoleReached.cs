@@ -26,9 +26,9 @@ public class KTWDFlagPoleReached : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D otherCollider)
     {
-        string playerTag = otherCollider.gameObject.tag;
+        string playerTag = otherCollider.transform.root.gameObject.tag;
 
-        if (playerTag == "Player" || playerTag == "PlayerFeet" || playerTag == "PlayerHead")
+        if (playerTag == "Player")
         {
             GameObject player = otherCollider.gameObject;
             Rigidbody2D rbPlayer = player.GetComponent<Rigidbody2D>();

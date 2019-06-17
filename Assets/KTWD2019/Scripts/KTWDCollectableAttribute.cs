@@ -32,10 +32,10 @@ public class KTWDCollectableAttribute : MonoBehaviour
     // This function gets called everytime this object collides with another
     private void OnTriggerEnter2D(Collider2D otherCollider)
     {
-        string playerTag = otherCollider.gameObject.tag;
+        string playerTag = otherCollider.transform.root.gameObject.tag;
 
         // is the other object a player?
-        if(playerTag == "Player" || playerTag == "PlayerFeet" || playerTag == "PlayerHead")
+        if(playerTag == "Player")
         {
             if(userInterface != null)
             {

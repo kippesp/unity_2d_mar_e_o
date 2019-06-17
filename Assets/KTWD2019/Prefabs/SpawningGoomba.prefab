@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyWhenActivated: 0
-  ignoreTag: 0
+  killcollider: {fileID: 0}
 --- !u!1001 &3360802548628552699
 PrefabInstance:
   m_ObjectHideFlags: 0
