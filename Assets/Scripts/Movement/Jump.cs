@@ -17,6 +17,8 @@ public class Jump : Physics2DObject
     public string groundTag = "Ground";
     private string obstaclesTag = "Obstacles";
 
+    private AudioSource source;
+
     //this determines if the script has to check for when the player touches the ground to enable him to jump again
     //if not, the player can jump even while in the air
     public bool checkGround = true;
@@ -27,6 +29,7 @@ public class Jump : Physics2DObject
     private void Start()
     {
         animator = GetComponent<Animator>();
+        source = GetComponent<AudioSource>();
     }
 
     // Read the input from the player
@@ -38,6 +41,8 @@ public class Jump : Physics2DObject
             // Apply an instantaneous upwards force
             rigidbody2D.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
             canJump = !checkGround;
+
+            source.Play();
         }
 
         animator.SetBool("Jumping", !canJump);

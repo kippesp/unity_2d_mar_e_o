@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3765664207573998044}
   - component: {fileID: 3765664207573998035}
   - component: {fileID: 3765664207573998033}
-  - component: {fileID: 3765664207573998034}
   m_Layer: 0
   m_Name: PowButtonDown
   m_TagString: Untagged
@@ -83,18 +82,6 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &3765664207573998033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3765664207573998032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4f67fed54419d4499ac222d3d52c823, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &3765664207573998034
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -223,7 +210,6 @@ GameObject:
   - component: {fileID: 3765664208449844463}
   - component: {fileID: 3765664208449844462}
   - component: {fileID: 3765664208449844460}
-  - component: {fileID: 3765664208449844461}
   m_Layer: 0
   m_Name: PowButtonUp
   m_TagString: Untagged
@@ -295,18 +281,6 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &3765664208449844460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3765664208449844451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4f67fed54419d4499ac222d3d52c823, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &3765664208449844461
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
