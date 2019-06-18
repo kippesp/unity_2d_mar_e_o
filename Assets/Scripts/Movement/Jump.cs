@@ -12,6 +12,8 @@ public class Jump : Physics2DObject
     // strength of the push
     public float jumpStrength = 10f;
 
+    private AudioSource source;
+
     [Header("Ground setup")]
     //if the object collides with another object tagged as this, it can jump again
     public string groundTag = "Ground";
@@ -27,6 +29,8 @@ public class Jump : Physics2DObject
     private void Start()
     {
         animator = GetComponent<Animator>();
+
+        source = GetComponent<AudioSource>();
     }
 
     // Read the input from the player
@@ -38,6 +42,8 @@ public class Jump : Physics2DObject
             // Apply an instantaneous upwards force
             rigidbody2D.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
             canJump = !checkGround;
+
+            source.Play();
         }
 
         animator.SetBool("Jumping", !canJump);
