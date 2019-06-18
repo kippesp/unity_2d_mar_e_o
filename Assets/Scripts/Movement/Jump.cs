@@ -9,6 +9,8 @@ public class Jump : Physics2DObject
     // the key used to activate the push
     public KeyCode key = KeyCode.Space;
 
+    private AudioSource source;
+
     // strength of the push
     public float jumpStrength = 10f;
 
@@ -27,6 +29,9 @@ public class Jump : Physics2DObject
     private void Start()
     {
         animator = GetComponent<Animator>();
+
+
+        source = GetComponent<AudioSource>();
     }
 
     // Read the input from the player
@@ -38,6 +43,9 @@ public class Jump : Physics2DObject
             // Apply an instantaneous upwards force
             rigidbody2D.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
             canJump = !checkGround;
+
+            source.Play();
+
         }
 
         animator.SetBool("Jumping", !canJump);
