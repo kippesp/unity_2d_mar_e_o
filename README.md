@@ -5,6 +5,12 @@ Playground
 
 See [Google Docs course slides](https://docs.google.com/presentation/d/1Kx0SPq9wWmNUZ53GVKmY2SWRDhTnZ4GOWFHm3i_21HM)
 
+# Unity Version
+
+This project was developed with Unity Version 2019.1.6f1 and the Playground
+version available at the time automatically downloaded from the Unity Store
+within Unity.
+
 # Game Scenes
 
 Proof-of-concept Scene of Prefab Concepts
